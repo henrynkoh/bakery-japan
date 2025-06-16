@@ -12,7 +12,7 @@ export default function Error({
   useEffect(() => {
     // Log error to console for debugging but don't show it to users if it's a hydration error
     if (error.message.includes('Hydration failed') || 
-        error.message.includes('expansion-alids')) {
+        error.message.includes('expansion-ids')) {
       return;
     }
     console.error(error);
@@ -20,7 +20,7 @@ export default function Error({
 
   // Don't show error UI for hydration mismatches
   if (error.message.includes('Hydration failed') || 
-      error.message.includes('expansion-alids')) {
+      error.message.includes('expansion-ids')) {
     return null;
   }
 
