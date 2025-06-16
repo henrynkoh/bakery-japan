@@ -20,8 +20,8 @@ export default function RootLayout({
               const originalError = console.error;
               console.error = function(...args) {
                 if (typeof args[0] === 'string' && 
-                    (args[0].includes('Hydration failed') || 
-                     args[0].includes('expansion-alids'))) {
+                    (args[0].includes('Hydration failed') ||
+                     args[0].includes('expansion-ids'))) {
                   return;
                 }
                 originalError.apply(console, args);
